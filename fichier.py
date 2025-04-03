@@ -27,10 +27,8 @@ class Fichier(MenuBar):
     def quitter(self):
         pass
    
-    def __init__(self, fenetre):
-        super().__init__(fenetre.root)
-        self.root = fenetre.root
-        self.sous_menu_fichier = self.sous_menu("Fichier")
+    def __init__(self, menu_bar):
+        self.sous_menu_fichier = menu_bar.sous_menu("Fichier")
             
         self.nouveau = self.commande(self.sous_menu_fichier, "Nouveau", self.creer_note)
         self.nouvelle_fenetre = self.commande(self.sous_menu_fichier, "Nouvelle fenêtre", self.ouvrir_nouvelle_fenetre)
